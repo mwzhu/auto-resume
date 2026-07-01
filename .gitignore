@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.env
+# Personal resume samples — don't commit private data
+sample-resume.docx
+sample-resume.pdf
+/tmp/

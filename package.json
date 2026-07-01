@@ -1,0 +1,21 @@
+{
+  "name": "auto-resume",
+  "version": "1.0.0",
+  "description": "Automatically optimize a resume for a specific job description while preserving formatting.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "cheerio": "^1.0.0",
+    "diff": "^7.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "mammoth": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "playwright": "^1.49.0"
+  }
+}

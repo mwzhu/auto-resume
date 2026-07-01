@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Auto-Resume · Optimize your resume for any job</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/resume.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">📄 Auto-Resume</div>
+      <div class="tagline">Tailor your resume to a job description — keep your formatting, download a PDF.</div>
+    </header>
+
+    <main>
+      <section class="panel form-panel">
+        <h2>1 · Your resume</h2>
+        <label class="file-drop" id="fileDrop">
+          <input type="file" id="resumeFile" accept=".docx,.pdf" hidden />
+          <span id="fileLabel">Click to choose a .docx or .pdf</span>
+        </label>
+        <p class="hint">DOCX keeps the most formatting. PDF is supported but loses styling.</p>
+
+        <h2>2 · The job</h2>
+        <label class="field-label" for="jdUrl">Job posting link</label>
+        <input type="url" id="jdUrl" placeholder="https://company.com/careers/role" />
+        <div class="or">or paste the description</div>
+        <textarea id="jdText" rows="6" placeholder="Paste the full job description here (recommended — many sites block link fetching)…"></textarea>
+
+        <button id="optimizeBtn" class="primary">Optimize resume</button>
+        <div id="status" class="status"></div>
+      </section>
+
+      <section class="panel result-panel" id="resultPanel" hidden>
+        <div class="result-header">
+          <div>
+            <h2>Result</h2>
+            <div class="summary" id="summary"></div>
+          </div>
+          <button id="downloadBtn" class="primary">⬇ Download optimized PDF</button>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" data-view="sidebyside">Side-by-side</button>
+          <button class="tab" data-view="changes">Changes only</button>
+        </div>
+
+        <div id="sidebyside" class="view">
+          <div class="cols">
+            <div class="col">
+              <div class="col-title">Original</div>
+              <div class="resume" id="origBody"></div>
+            </div>
+            <div class="col">
+              <div class="col-title">Optimized</div>
+              <div class="resume" id="optBody"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="changes" class="view" hidden>
+          <div id="changesList"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
