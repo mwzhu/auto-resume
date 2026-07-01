@@ -11,7 +11,7 @@ titles, dates, and original formatting intact.
 - **Upload `.docx` or `.pdf`** — DOCX preserves the most formatting (headings, bold, bullets).
 - **Job description by URL or paste** — the server tries to fetch the link; if the site
   blocks scraping (LinkedIn, Workday, etc.), just paste the description.
-- **Keyword optimization with Claude (Opus 4.8)** — rewrites only descriptive content
+- **Keyword optimization with Claude (Sonnet 5)** — rewrites only descriptive content
   (bullets, skills) using the job's language. It never fabricates experience.
 - **Side-by-side diff viewer** — see the original and optimized resume next to each other,
   with changed lines highlighted and a word-level "before/after" list.
